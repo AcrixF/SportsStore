@@ -1,7 +1,10 @@
-import React, {Component} from 'react';
-import {CategoryNavigation} from "./CategoryNavigation";
-import {ProductList} from "./ProductList";
+import React, { Component } from 'react';
+import { CategoryNavigation } from "./CategoryNavigation";
+import { ProductList } from "./ProductList";
 
+/*
+*  Parents configure their child components by providing props
+* */
 export class Shop extends Component {
 
     render() {
@@ -22,5 +25,5 @@ export class Shop extends Component {
                 </div>
 
     }
-    
+
 }
