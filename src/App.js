@@ -6,14 +6,14 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import './App.css';
 
 export default class App extends Component {
-    render = () => <Provider store={ SportsStoreDataStore}>
-        <Router>
-          <Switch>
-            <Route path="/shop" component={ ShopConnector }/>
-            <Redirect to="/shop"/>
-          </Switch>
-        </Router>
-    </Provider>
+    render = () => <Provider store={ SportsStoreDataStore }>
+                        <Router>
+                          <Switch>
+                            <Route path="/shop" component={ ShopConnector }/>
+                            <Redirect to="/shop"/>
+                          </Switch>
+                        </Router>
+                    </Provider>
 }
 
 
