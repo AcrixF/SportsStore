@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import { Shop } from "./Shop";
 import { DataTypes } from "../data/Types";
 import { loadData } from "../data/ActionCreators";
+import { addToCart, updateCartQuantity, removeFromCart, clearCart } from "../data/CartActionCreators";
 
 
 /*
@@ -32,7 +33,7 @@ import { loadData } from "../data/ActionCreators";
 const mapStateToProps = (dataStore) => ({...dataStore});
 
 const mapDispatchToProps = {
-    loadData
+    loadData, addToCart, updateCartQuantity,removeFromCart, clearCart
 };
 
 const filterProduct = (products = [], category ) =>

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { CategoryNavigation } from "./CategoryNavigation";
 import { ProductList } from "./ProductList";
+import { CartSummary} from "../CartSummary";
 
 /*
-*  Parents configure their child components by providing props
+*  Parents configure their child components by providing props.
 * */
 export class Shop extends Component {
 
@@ -12,13 +13,14 @@ export class Shop extends Component {
                     <div className="row">
                         <div className="col bg-dark text-white">
                             <div className="navbar-brand">SPORT STORE</div>
+                            <CartSummary { ...this.props }/>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-3 p-2">
                             <CategoryNavigation baseUrl="/shop/products" categories={this.props.categories}/>
                         </div>
-                        <div className="col-p p-2">
+                        <div className="col-9 p-2">
                             <ProductList products={this.props.products}/>
                         </div>
                     </div>
